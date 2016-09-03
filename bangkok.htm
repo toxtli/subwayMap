@@ -1,0 +1,170 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bangkok 2016</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery.subwayMap-0.5.0.js"></script>
+    <style type="text/css">
+    body
+    {
+        font-family: Verdana;
+        font-size: 8pt;
+    }
+
+    /* The main DIV for the map */
+    .subway-map
+    {
+        margin: 0;
+        background-color: white;
+    }
+
+    /* Text labels */
+    .text
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    #legend
+    {
+    }
+
+    #legend div
+    {
+        height: 25px;
+    }
+
+    #legend span
+    {
+        margin: 5px 5px 5px 0;
+    }
+    .subway-map span
+    {
+        margin: 5px 5px 5px 0;
+    }
+ 
+    </style>
+</head>
+<body>
+    <div class="subway-map" data-columns="90" data-rows="45" data-cellSize="30" data-legendId="legend" data-textClass="text" data-gridNumbers="false" data-grid="true" data-lineWidth="5">
+        <ul data-color="#933FA0" data-label="Purple Line"> 
+            <li data-coords="0,4" data-marker="station"></li>
+            <li data-coords="4,4" data-marker="station">Tha It</li>
+            <li data-coords="8,4">Sai Ma</li>
+            <li data-coords="12,4" data-marker="station">Phra Nangklao Bridge</li>
+            <li data-coords="16,4" data-marker="station">Yaek Nonthaburi 1</li>
+            <li data-coords="20,4">Bang Kraso</li>
+            <li data-coords="24,4" data-marker="station">Nonthaburi Civic Center</li>
+            <li data-coords="26,4"></li>
+            <li data-coords="27,6" data-marker="station" data-labelPos="W">Ministry of Public Health</li>
+            <li data-coords="28,8" data-marker="station" data-labelPos="W">Yaek Tiwanon</li>
+            <li data-coords="29,10"></li>
+            <li data-coords="29,11" data-marker="station" data-labelPos="W">Wong Sawang</li>
+            <li data-coords="29,13" data-marker="station" data-labelPos="W">Bang Son</li>
+            <li data-coords="29,15" data-marker="interchange" data-labelPos="NW">Tao Pun</li>
+        </ul>
+
+        <ul data-color="#006CBC" data-label="Blue Line" data-shiftCoords="0,-1">
+<!--             <li data-coords="29,15"></li>
+            <li data-coords="29,15" data-marker="@interchange" data-labelPos="NW">Tao Pun</li> -->
+            <li data-coords="33,15" data-marker="station" data-labelPos="NW">Bang Sue</li>
+            <li data-coords="36,15" data-marker="station">Kamphaeng Phet</li>
+            <li data-coords="38,15"></li>
+            <li data-coords="39,14" data-dir="E"></li>
+            <li data-coords="39,13" data-marker="station" data-labelPos="W">Chatuchak Park</li>
+            <li data-coords="39,11" data-marker="station" data-labelPos="W">Phahon Yothin</li>
+            <li data-coords="40,10" data-dir="N"></li>
+            <li data-coords="43,10" data-marker="station">Lat Phrao</li>
+            <li data-coords="48,10" data-marker="station">Ratchadaphisek</li>
+            <li data-coords="51,10"></li>
+            <li data-coords="52,11" data-marker="station" data-labelPos="E" data-dir="E">Sutthisan</li>
+            <li data-coords="52,14" data-marker="station" data-labelPos="E">Huai Khwang</li>
+            <li data-coords="52,15"></li>
+            <li data-coords="52,17" data-marker="station" data-labelPos="E">Thailand Cultural Centre</li>
+            <li data-coords="52,20" data-marker="station" data-labelPos="E">Phra Ram 9</li>
+            <li data-coords="52,23" data-marker="station" data-labelPos="NW">Phetchaburi</li>
+            <li data-coords="52,26" data-marker="station" data-labelPos="NW">Sukhumvit</li>
+            <li data-coords="52,28" data-marker="station" data-labelPos="E">Queen Sirikit Centre</li>
+            <li data-coords="52,29"></li>
+            <li data-coords="51,30" data-dir="S"></li>
+            <li data-coords="49,30" data-marker="station">Khlong Toei</li>
+            <li data-coords="45,30" data-marker="station" data-labelPos="N">Lumphini</li>
+            <li data-coords="41,30" data-marker="station" data-labelPos="NW">Si Lom</li>
+            <li data-coords="37,30" data-marker="station">Sam Yan</li>
+            <li data-coords="33,30" data-marker="station">Hua Lamphong</li>
+        </ul>
+
+        <ul data-color="#285E3B" data-label="Sukhumvit Line" data-shiftCoords="1,0">
+            <li data-coords="39,13" data-marker="station" data-labelPos="E">Mo Chit</li>
+            <li data-coords="39,15" data-marker="station" data-labelPos="E">Saphan Khwai</li>
+            <li data-coords="39,17" data-marker="station" data-labelPos="E">Ari</li>
+            <li data-coords="39,19" data-marker="station" data-labelPos="E">Sanam Pao</li>
+            <li data-coords="39,21" data-marker="station" data-labelPos="W">Victory Monument</li>
+            <li data-coords="39,23" data-marker="station" data-labelPos="SW">Phaya Thai</li>
+            <li data-coords="39,25" data-marker="station" data-labelPos="W">Ratchathewi</li>
+
+            <li data-coords="40,26" data-dir="S"></li>
+
+            <li data-coords="40,26" data-marker="@interchange" data-labelPos="NE">Siam</li>
+            <li data-coords="43,26" data-marker="station">Chit Lom</li>
+            <li data-coords="46,26" data-marker="station" data-labelPos="N">Phloen Chit</li>
+            <li data-coords="49,26" data-marker="station">Nana</li>
+            <li data-coords="52,26" data-marker="station" data-labelPos="SE">Asok</li>
+            <li data-coords="55,26" data-marker="station" data-labelPos="N">Phrom Phong</li>
+            <li data-coords="56,26"></li>
+            <li data-coords="58,27" data-marker="station" data-labelPos="E">Thong Lo</li>
+            <li data-coords="60,28" data-marker="station" data-labelPos="E">Ekkamai</li>
+            <li data-coords="62,29" data-marker="station" data-labelPos="E">Phra Khanong</li>
+            <li data-coords="64,30"></li>
+            <li data-coords="64,31" data-marker="station" data-labelPos="E">On Nut</li>
+            <li data-coords="64,33" data-marker="station" data-labelPos="E">Bang Chak</li>
+            <li data-coords="64,35" data-marker="station" data-labelPos="E">Punnawithi</li>
+            <li data-coords="64,37" data-marker="station" data-labelPos="E">Udom Suk</li>
+            <li data-coords="64,39" data-marker="station" data-labelPos="E">Bang Na</li>
+            <li data-coords="64,41" data-marker="station" data-labelPos="E">Bearing</li>
+        </ul>
+
+        <ul data-color="#75BD42" data-label="Silom Line" data-shiftCoords="1,1">
+            <li data-coords="37,26" data-marker="station">National Stadium</li>
+            <li data-coords="40,26"></li>
+            <li data-coords="40,26" data-marker="@interchange" data-labelPos="NE">Siam</li>
+            <li data-coords="41,27" data-dir="E"></li>
+            <li data-coords="41,28" data-marker="station" data-labelPos="W">Ratchadamri</li>
+            <li data-coords="41,30" data-marker="station" data-labelPos="SE">Sala Daeng</li>
+            <li data-coords="41,32" data-marker="station" data-labelPos="W">Chong Nonsi</li>
+            <li data-coords="41,34" data-marker="station" data-labelPos="W">Sueksa Witthaya</li>
+            <li data-coords="41,36" data-marker="station" data-labelPos="W">Surasak</li>
+            <li data-coords="41,37"></li>
+            <li data-coords="40,38" data-dir="S"></li>
+            <li data-coords="37,38" data-marker="station">Saphan Taksin</li>
+            <li data-coords="33,38" data-marker="station">Krung Thonburi</li>
+            <li data-coords="29,38" data-marker="station">Wongwian Yai</li>
+            <li data-coords="25,38" data-marker="station">Pho Nimit</li>
+            <li data-coords="21,38" data-marker="station">Talat Phlu</li>
+            <li data-coords="19,38"></li>
+            <li data-coords="18,37" data-dir="W"></li>
+            <li data-coords="18,36"></li>
+            <li data-coords="18,36" data-marker="station" data-labelPos="W">Wutthakat</li>
+            <li data-coords="18,33" data-marker="station" data-labelPos="W">Bang Wa</li>
+        </ul>
+
+        <ul data-color="#7B272A" data-label="Airport Link" data-shiftCoords="1,0">
+            <li data-coords="39,23" data-marker="station" data-labelPos="SW">Phaya Thai</li>
+            <li data-coords="46,23" data-marker="station">Ratchaprarop</li>
+            <li data-coords="52,23" data-marker="station" data-labelPos="SE">Makkasan</li>
+            <li data-coords="60,23" data-marker="station">Ramkhamhaeng</li>
+            <li data-coords="68,23" data-marker="station">Hua Mak</li>
+            <li data-coords="74,23" data-marker="station">Ban Thap Chang
+            <li data-coords="80,23" data-marker="station">Lat Krabang
+            <li data-coords="86,23" data-marker="station">Suvarnabhumi Airport
+        </ul>
+
+    </div>
+    <div id="legend"></div>
+    
+
+    <script type="text/javascript">
+        $(".subway-map").subwayMap({ debug: true });
+    </script>
+</body>
+</html>
